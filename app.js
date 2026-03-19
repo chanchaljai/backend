@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
+//path require
+const userRoute = require("./routes/users");
+//connect with users.js
+app.use("/", userRoute);
 
-//route
-
-app.get("/", (req, res)=>{
-    res.send("server ok")
-});
-
+//port
 app.listen(3000, ()=> {
-    console.log("server console pe chal rha hai")
+    console.log("server 3000 port ok")
 });
