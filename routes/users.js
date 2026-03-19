@@ -10,7 +10,7 @@ router.get("/user",(req, res)=>{
 });
 
 router.get("/profile",(req, res)=>{
-    res.send("profile page chal rha hai")
+    res.render("profile")
 });
 // page export
 module.exports = router;
