@@ -23,20 +23,20 @@ router.get("/",(req, res)=>{
 // });
 
 //read one
-// router.get("/find",async (req, res)=>{
-//     const findOne = await userModel.findOne({
-//         username: "joy"
-//     });
-//     res.send(findOne);
-// });
-
-// delete
-router.get("/delete",async (req, res)=>{
-    const deleteUser = await userModel.findOneAndDelete({
+router.get("/find",async (req, res)=>{
+    const findOne = await userModel.findOne({
         username: "harsh"
     });
-    res.send(deleteUser);
+    res.send(findOne);
 });
+
+// delete
+// router.get("/delete",async (req, res)=>{
+//     const deleteUser = await userModel.findOneAndDelete({
+//         username: "harsh"
+//     });
+//     res.send(deleteUser);
+// });
 
 
 router.get("/profile",(req, res)=>{

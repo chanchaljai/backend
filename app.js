@@ -15,5 +15,5 @@ app.use(express.static("public"));
 
 //port
 app.listen(3000, ()=> {
-    console.log("server 3000 port ok")
+    console.log("server 3000 is working")
 });
