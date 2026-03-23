@@ -1,7 +1,7 @@
-const express = require("express");
+import express from "express";
 const app = express();
 //path require
-const userRoute = require("./routes/users");
+import userRoute from "./routes/users.js";
 
 
 app.set("view engine", "ejs");

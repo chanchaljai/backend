@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const userModel = require("../db/connect")
+import userModel from "../db/connect.js";
 
 router.get("/",(req, res)=>{
     res.send("home page chal rha hai")
@@ -23,12 +23,12 @@ router.get("/",(req, res)=>{
 // });
 
 //read one
-router.get("/find",async (req, res)=>{
-    const findOne = await userModel.findOne({
-        username: "harsh"
-    });
-    res.send(findOne);
-});
+// router.get("/find",async (req, res)=>{
+//     const findOne = await userModel.findOne({
+//         username: "harsh"
+//     });
+//     res.send(findOne);
+// });
 
 // delete
 // router.get("/delete",async (req, res)=>{
@@ -43,4 +43,4 @@ router.get("/profile",(req, res)=>{
     res.render("profile")
 });
 // page export
-module.exports = router;
+export default router;
